@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+	This POM installs the portal struts JARs into a maven repository.
+	Based on a sample provided by IBM for importing WAS 8.5.5 JARs
+	
+	Usage: 
+		install maven
+		From the directory where this .pom file is, run the following as an example:
+	
+	mvn install -f portal.struts.installer-8.0.0.1.pom -DportalInstallationFolder=P:/IBM/WebSphere/PortalServer/
+	
+	*** don't forget the trailing slash on the end up there ***
+		
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ibm.tools.target</groupId>
+	<artifactId>portal.struts.installer</artifactId>
+	<version>8.0.0.1</version>
+	<packaging>pom</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.1</version>
+				<inherited>false</inherited>
+				<executions>				
+					<execution><id>install-artifacts-websphere:PortalStruts</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/PortalStruts.jar</file><groupId>websphere.portal.struts</groupId><artifactId>PortalStruts</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:PortalStrutsCommon</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/PortalStrutsCommon.jar</file><groupId>websphere.portal.struts</groupId><artifactId>PortalStrutsCommon</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:PortalStrutsTags</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/PortalStrutsTags.jar</file><groupId>websphere.portal.struts</groupId><artifactId>PortalStrutsTags</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:struts</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/struts.jar</file><groupId>websphere.portal.struts</groupId><artifactId>struts</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:struts-legacy</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/struts-legacy.jar</file><groupId>websphere.portal.struts</groupId><artifactId>struts-legacy</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:StrutsUpdateForPortal</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/StrutsUpdateForPortal.jar</file><groupId>websphere.portal.struts</groupId><artifactId>StrutsUpdateForPortal</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:wp.struts.tlds.common</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/wp.struts.tlds.common.jar</file><groupId>websphere.portal.struts</groupId><artifactId>wp.struts.tlds.common</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+					<execution><id>install-artifacts-websphere:wp.struts-commons-logging</id><goals><goal>install-file</goal></goals><phase>install</phase><configuration><file>${portal.install.dir}pzn/prereq.pzn/installedApps/Personalization_Workspace.ear/pznauthorportlet.war/WEB-INF/lib/wp.struts-commons-logging.jar</file><groupId>websphere.portal.struts</groupId><artifactId>wp.struts-commons-logging</artifactId><version>8.0.0.1</version><packaging>jar</packaging></configuration></execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<portal.install.dir>${portalInstallationFolder}/</portal.install.dir>
+	</properties>
+</project>

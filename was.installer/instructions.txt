@@ -1,0 +1,3 @@
+Run the following
+
+mvn install -f was.installer-8.5.5-FixPack-01.pom -DserverInstallationFolder=R:/IBM/WebSphere/AppServer

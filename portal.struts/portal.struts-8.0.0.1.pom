@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ibm.tools.target</groupId>
+	<artifactId>portal.struts</artifactId>
+	<name>WebSphere Portal Server Struts Libraries v 8.0.0.1 Target</name>
+	<packaging>pom</packaging>
+	<version>8.0.0.1</version>
+	<description>
+        WebSphere Portal Server Struts Libraries v 8.0.0.1 target
+	</description>
+	<dependencies>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>PortalStruts</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>PortalStrutsCommon</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>PortalStrutsTags</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>struts</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>struts-legacy</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>StrutsUpdateForPortal</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>wp.struts.tlds.common</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+		<dependency><groupId>websphere.portal.struts</groupId><artifactId>wp.struts-commons-logging</artifactId><version>8.0.0.1</version><type>jar</type></dependency>
+	</dependencies>
+</project>
